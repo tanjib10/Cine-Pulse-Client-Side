@@ -1,22 +1,55 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const navLink = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <NavLink
+          to="/"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending text-xl"
+              : isActive
+              ? "active text-xl text-red-600 underline"
+              : ""
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <Link to="/addProduct">Add Product</Link>
+        <NavLink
+          to="/addProduct"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending text-xl"
+              : isActive
+              ? "active text-xl text-red-600 underline"
+              : ""
+          }
+        >
+          Add Product
+        </NavLink>
       </li>
       <li>
-        <Link to="/myCart">My Cart</Link>
+        <NavLink
+          to="/myCart"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending text-xl"
+              : isActive
+              ? "active text-xl text-red-600 underline"
+              : ""
+          }
+        >
+          My Cart
+        </NavLink>
       </li>
     </>
   );
   return (
-    <div>
-      <div className="navbar bg-base-100">
+    <div className="max-w-7xl mx-auto">
+      <div className="navbar text-white  bg-[#232D3F]">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,11 +79,13 @@ const Navbar = () => {
             Cine-Pulse
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLink}</ul>
+        <div className="text-xl navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1  ">{navLink}</ul>
         </div>
-        <div className="navbar-end">
-          <Link to="/login">Login</Link>
+        <div className="navbar-end text-xl">
+          <Link className="btn btn-ghost" to="/login">
+            Login
+          </Link>
         </div>
       </div>
     </div>
