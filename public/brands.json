@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/R62rGZN/thibault-penin-AWOl7qqsff-M-unsplash.jpg",
+    "brandTitle": "Netflix"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/yWpFNs3/kin-li-EGJ-Yrq-PS8-E-unsplash.jpg",
+    "brandTitle": "Disney"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/ZJK4gWs/boliviainteligente-s-KXo-Ezc-Ols-unsplash.jpg",
+    "brandTitle": "Amazon Prime Video"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/99yfrTh/boliviainteligente-Ci-LXQEu8-YUs-unsplash.jpg",
+    "brandTitle": "Hulu"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/zGsHPCL/reiseuhu-Ev-Y96-ANTk-A4-unsplash.jpg",
+    "brandTitle": "HBO Max"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/6b5Jt8J/james-yarema-0-Uj-C9-bz0-Gk-unsplash.jpg",
+    "brandTitle": "Apple TV+"
+  }
+]
