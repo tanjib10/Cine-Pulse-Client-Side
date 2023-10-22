@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "title": "Avengers: Endgame",
+      "genre": "Action, Adventure, Sci-Fi",
+      "poster_url": "https://i.ibb.co/0scWDBM/mulyadi-5-P190-ENSblg-unsplash.jpg",
+      "duration": 181
+    },
+    {
+      "id": 2,
+      "title": "The Lion King",
+      "genre": "Animation, Adventure, Drama",
+      "poster_url": "https://i.ibb.co/VtbSF3m/4692c964-61ba-486d-9c77-939dbfba2f07.jpg",
+      "duration": 118
+    },
+    {
+      "id": 3,
+      "title": "Joker",
+      "genre": "Crime, Drama, Thriller",
+      "poster_url": "https://i.ibb.co/mSVTfqN/MV5-BMGQ1-ZGZm-NTAt-M2-My-Yi00-Nm-Zh-LTkw-Ym-Yt-NTNl-ZDRh-Mz-U2-ZTgw-Xk-Ey-Xk-Fqc-Gde-QW1yb3-Nz-ZXI.jpg",
+      "duration": 122
+    },
+    {
+      "id": 4,
+      "title": "Inception",
+      "genre": "Action, Adventure, Sci-Fi",
+      "poster_url": "https://i.ibb.co/2nqbVzF/26677df38123a3a1553d704477c100af81b641e1d539bc1991f99f89935f18b0.jpg",
+      "duration": 148
+    },
+    {
+      "id": 5,
+      "title": "Toy Story 4",
+      "genre": "Animation, Adventure, Comedy",
+      "poster_url": "https://i.ibb.co/BC2pcyf/hqdefault.jpg",
+      "duration": 100
+    },
+    {
+      "id": 6,
+      "title": "Wonder Woman",
+      "genre": "Action, Adventure, Fantasy",
+      "poster_url": "https://i.ibb.co/BwrhXdn/2017-The-Wonder-Woman-Gal-Gadot-wide-0.jpg",
+      "duration": 151
+    }
+  ]
+
