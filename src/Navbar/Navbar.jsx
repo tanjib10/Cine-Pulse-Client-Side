@@ -1,3 +1,4 @@
+import logo from "../assets/Logo.png";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -76,6 +77,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost normal-case text-2xl">
+            <img className="w-8 rounded-full" src={logo} alt="" />
             Cine-Pulse
           </Link>
         </div>
