@@ -1,7 +1,23 @@
+import userDefault from "../assets/user.png";
 import logo from "../assets/Logo.png";
 import { Link, NavLink } from "react-router-dom";
-
+import Swal from "sweetalert2";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleSignOut = () => {
+    logOut()
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Logged Out",
+          text: "You have been successfully logged out!",
+        });
+      })
+      .catch();
+  };
+
   const navLink = (
     <>
       <li>
@@ -84,10 +100,30 @@ const Navbar = () => {
         <div className="text-xl navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1  ">{navLink}</ul>
         </div>
-        <div className="navbar-end text-xl">
-          <Link className="btn btn-ghost" to="/login">
-            Login
-          </Link>
+        <div className="navbar-end">
+          {user ? (
+            <div className="flex items-center justify-center gap-2">
+              <p className="text-white">{user.displayName}</p>
+              <img className="w-8" src={user.photoURL} alt="" />
+            </div>
+          ) : (
+            <img className="w-8" src={userDefault} alt="" />
+          )}
+
+          {user ? (
+            <button
+              onClick={handleSignOut}
+              className="text-xl font-semibold btn btn-ghost text-white"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link to="/login">
+              <button className="text-xl font-semibold btn btn-ghost text-white">
+                Login
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
