@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 const Brand = ({ brand }) => {
+  // eslint-disable-next-line no-unused-vars
   const { id, image, brandTitle } = brand;
   return (
-    <Link to={`/brandDetails/${id}`}>
+    <Link to={`/brandDetails/${brandTitle}`}>
       <div className="ml-6 cursor-pointer lg:ml-0">
         <div className="card w-96 h-72 bg-base-100 shadow-xl">
           <figure>
