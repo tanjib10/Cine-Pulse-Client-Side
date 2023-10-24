@@ -6,11 +6,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import "swiper/css/bundle";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const BrandDetails = () => {
   const brands = useLoaderData();
-
+  // const { _id } = useParams();
   return (
     <div>
       <Swiper
@@ -81,10 +81,12 @@ const BrandDetails = () => {
                   <p className="text-emerald-600">{brand.details}</p>
                   <div className="card-actions justify-end">
                     <div className="bg-cyan-400 text-white rounded-lg">
-                      <button className="btn btn-ghost">Update</button>
+                      <Link to={`/productDetails/${brand._id}`}>
+                        <button className="btn btn-ghost">Details</button>
+                      </Link>
                     </div>
                     <div className="bg-amber-500">
-                      <button className="btn btn-ghost">Details</button>
+                      <button className="btn btn-ghost">Update</button>
                     </div>
                   </div>
                 </div>
