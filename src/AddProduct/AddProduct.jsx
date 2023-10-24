@@ -7,7 +7,7 @@ const AddProduct = () => {
     const form = event.target;
 
     const name = form.name.value;
-    const brandName = form.brandName.value;
+    const brandTitle = form.brandTitle.value;
     const price = form.price.value;
     const rating = form.rating.value;
     const type = form.type.value;
@@ -16,7 +16,7 @@ const AddProduct = () => {
 
     const newProduct = {
       name,
-      brandName,
+      brandTitle,
       price,
       rating,
       type,
@@ -71,14 +71,18 @@ const AddProduct = () => {
             <label className="label">
               <span className="label-text">Brand Name</span>
             </label>
-            <label className="input-group">
-              <input
-                type="text"
-                name="brandName"
-                placeholder="Brand Name"
-                className="input input-bordered w-full"
-              />
-            </label>
+            <select
+              id="countries"
+              name="brandTitle"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            >
+              <option value="Netflix">Netflix</option>
+              <option value="Disney">Disney</option>
+              <option value="HBO Max">HBO Max</option>
+              <option value="Amazon Prime Video">Amazon Prime Video</option>
+              <option value="Hulu">Hulu</option>
+              <option value="Apple TV+">Apple TV+</option>
+            </select>
           </div>
         </div>
         {/* form supplier row */}
