@@ -45,7 +45,53 @@ const BrandDetails = () => {
         </Swiper>
       </Swiper>
       <div className="my-24 max-w-6xl mx-auto">
-        <h3 className="text-3xl text-center">Our Collections{brands.length}</h3>
+        <h3 className="text-3xl text-center font-bold mb-16 text-[#005B41]">
+          {brands.brandTitle} Collections
+        </h3>
+        <div className="grid grid-cols-1 ml-6 lg:ml-0 lg:grid-cols-2 gap-10">
+          {brands.map((brand) => (
+            <div key={brand.id}>
+              <div className="card w-96 h-[500px] bg-base-100 shadow-xl">
+                <figure>
+                  <img
+                    className="w-full object-cover"
+                    src={brand.image}
+                    alt="Shoes"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">
+                    {brand.name}
+                    <span className="font-normal text-xs">
+                      {brand.brandTitle}
+                    </span>
+                  </h2>
+                  <div className="flex justify-center items-center">
+                    <p>
+                      Type : <span className="font-bold">{brand.type}</span>{" "}
+                    </p>
+                    <p>
+                      Rating : <span className="font-bold">{brand.rating}</span>{" "}
+                    </p>
+                  </div>
+                  <p>
+                    Price :{" "}
+                    <span className="font-extrabold">{brand.price}</span>
+                  </p>
+                  <p className="text-emerald-600">{brand.details}</p>
+                  <div className="card-actions justify-end">
+                    <div className="bg-cyan-400 text-white rounded-lg">
+                      <button className="btn btn-ghost">Update</button>
+                    </div>
+                    <div className="bg-amber-500">
+                      <button className="btn btn-ghost">Details</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
