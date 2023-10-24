@@ -11,6 +11,7 @@ import Login from "./Login/Login";
 import Register from "./Register/Register";
 import AuthProvider from "./Provider/AuthProvider";
 import ProductDetails from "./ProductDetails/ProductDetails";
+import AddProduct from "./AddProduct/AddProduct";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/addProduct",
+        element: <AddProduct></AddProduct>,
       },
       {
         path: "/brandDetails/:brandTitle",
