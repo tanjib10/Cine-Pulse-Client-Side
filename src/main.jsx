@@ -13,6 +13,7 @@ import AuthProvider from "./Provider/AuthProvider";
 import ProductDetails from "./ProductDetails/ProductDetails";
 import AddProduct from "./AddProduct/AddProduct";
 import UpdateProduct from "./UpdateProduct/UpdateProduct";
+import PrivateRoute from "../src/PrivateRoute/PrivateRoute";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,7 +26,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/addProduct",
-        element: <AddProduct></AddProduct>,
+        element: (
+          <PrivateRoute>
+            <AddProduct></AddProduct>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/brandDetails/:brandTitle",
@@ -35,14 +40,18 @@ const router = createBrowserRouter([
       },
       {
         path: "/productDetails/:_id",
-        element: <ProductDetails></ProductDetails>,
+        element: (
+          <PrivateRoute>
+            <ProductDetails></ProductDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("http://localhost:5000/brand"),
       },
       {
-        path: "/updateProduct/:id",
+        path: "/updateProduct/:_id",
         element: <UpdateProduct></UpdateProduct>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/brand/${params.id}`),
+          fetch(`http://localhost:5000/brand/updateProduct/:${params.id}`),
       },
       {
         path: "/login",
