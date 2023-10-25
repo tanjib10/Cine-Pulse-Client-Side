@@ -37,7 +37,9 @@ const router = createBrowserRouter([
         path: "/brandDetails/:brandTitle",
         element: <BrandDetails></BrandDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/brand/${params.brandTitle}`),
+          fetch(
+            `https://cine-pulse-server-marmggqux-radiuls-projects.vercel.app/brand/${params.brandTitle}`
+          ),
       },
       {
         path: "/productDetails/:_id",
@@ -46,7 +48,10 @@ const router = createBrowserRouter([
             <ProductDetails></ProductDetails>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/brand"),
+        loader: () =>
+          fetch(
+            "https://cine-pulse-server-marmggqux-radiuls-projects.vercel.app/brand"
+          ),
       },
 
       {
@@ -57,7 +62,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/brand/updateProduct/${params.id}`),
+          fetch(
+            `https://cine-pulse-server-marmggqux-radiuls-projects.vercel.app/brand/updateProduct/${params.id}`
+          ),
       },
 
       {

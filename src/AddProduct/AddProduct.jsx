@@ -27,13 +27,16 @@ const AddProduct = () => {
     console.log(newProduct);
 
     // send data to the server
-    fetch("http://localhost:5000/brand", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newProduct),
-    })
+    fetch(
+      "https://cine-pulse-server-marmggqux-radiuls-projects.vercel.app/brand",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

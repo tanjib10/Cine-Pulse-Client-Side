@@ -1,8 +1,23 @@
-# React + Vite
+Live Link : https://cine-pulse.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Here are five features of my website:
 
-Currently, two official plugins are available:
+- Movie Listings:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A comprehensive list of current and upcoming movies, including showtimes, descriptions, and trailers.
+
+- Online Ticket Booking:
+  A user-friendly interface for purchasing tickets, selecting seats, and making secure online payments.
+
+- Theater Information:
+
+Details about the cinema's location, address, contact information, and directions to help visitors find the theater easily.
+
+- Reviews and Ratings:
+
+User-generated reviews and ratings for movies, allowing visitors to read and share their opinions about films.
+
+- Promotions and Special Offers:
+
+Information about discounts, promotions, loyalty programs, and special events, which can help attract more
+customers to the cinema.

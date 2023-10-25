@@ -33,13 +33,16 @@ const UpdateProduct = () => {
     console.log(updatedProduct);
 
     // send data to the server
-    fetch(`http://localhost:5000/brand/updateProduct/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updatedProduct),
-    })
+    fetch(
+      `https://cine-pulse-server-marmggqux-radiuls-projects.vercel.app/brand/updateProduct/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updatedProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
