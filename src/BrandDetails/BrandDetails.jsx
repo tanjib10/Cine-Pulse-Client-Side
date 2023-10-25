@@ -86,7 +86,7 @@ const BrandDetails = () => {
                       </Link>
                     </div>
                     <div className="bg-amber-500">
-                      <Link to={`updateProduct/${brand._id}`}>
+                      <Link to={`/updateProduct/${brand._id}`}>
                         <button className="btn btn-ghost">Update</button>
                       </Link>
                     </div>
